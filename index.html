@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abidjan</title>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <nav>
+        <a href="#">Accueil</a>
+        <a href="./web/histoire.html">Histoire</a>
+        <a href="./web/demographie.html">Demographie</a>
+        <a href="./web/images.html">images</a>
+    </nav>
+
+    <div class="o-video">
+
+        <iframe width="751" height="422" src="https://www.youtube.com/embed/fSSMWDTjYOA" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+    </div>
+    <script>
+        let menuIcon = document.querySelector(".menuIcon");
+        let nav = document.querySelector(".overlay-menu");
+
+        menuIcon.addEventListener("click", () => {
+            if (nav.style.transform != "translateX(0%)") {
+                nav.style.transform = "translateX(0%)";
+                nav.style.transition = "transform 0.2s ease-out";
+            } else {
+                nav.style.transform = "translateX(-100%)";
+                nav.style.transition = "transform 0.2s ease-out";
+            }
+        });
+
+        // Toggle Menu Icon ========================================
+        let toggleIcon = document.querySelector(".menuIcon");
+
+        toggleIcon.addEventListener("click", () => {
+            if (toggleIcon.className != "menuIcon toggle") {
+                toggleIcon.className += " toggle";
+            } else {
+                toggleIcon.className = "menuIcon";
+            }
+        });
+
+    </script>
+</body>
+
+</html>
